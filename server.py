@@ -32,7 +32,7 @@ def upload_file():
     detected_codes = decode(gray)
 
     if not detected_codes:
-        return jsonify({git add ."success": False, "error": "Не удалось распознать код"}), 400
+        return jsonify({"success": False, "error": "Не удалось распознать код"}), 400
 
     barcode_data = detected_codes[0].data.decode("utf-8")  # Берём первый найденный код
     barcode_type = detected_codes[0].type
